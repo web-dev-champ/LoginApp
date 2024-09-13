@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+/* Light Mode (default) */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar */
+.navbar {
+  background-color: #f8f9fa; /* Light mode */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dark-mode .navbar {
+  background-color: #333; /* Dark mode */
+}
+
+.navbar a {
+  color: black; /* Light mode */
+}
+
+.dark-mode .navbar a {
+  color: white; /* Dark mode */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  color: black;
+}
+
+.dark-mode .navbar-brand {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Form inputs */
+.form-control {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode .form-control {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .btn-primary {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: white;
+}
+
+/* Apply to all elements */
+* {
+  transition: background-color 0.3s, color 0.3s;
 }
